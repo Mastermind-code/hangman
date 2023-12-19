@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  background: blueviolet;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  /* height: 100%; */
+  width: 850px;
+  padding: 40px;
+  background: #fff;
+  display: flex;
+  gap: 70px;
+  align-items: flex-end;
+  border-radius: 10px;
+}
+
+.hangman-box {
+  max-width: 270px;
+}
+.hangman-box h1 {
+  margin-top: 18px;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.word-display {
+  display: flex;
+  gap: 2px;
+  list-style: none;
+}
+.word-display .letter {
+  width: 28px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #000;
+}
+
+.hint-text {
+  text-transform: capitalize;
+}
