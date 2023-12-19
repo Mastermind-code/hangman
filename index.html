@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
+    <div class="game-modal">
+      <div class="content">
+        <img src="images/lost.gif" alt="gif" />
+        <h4>Game Over</h4>
+        <p>The correct word was <b>rainbow</b></p>
+        <button class="play-again">Play Again</button>
+      </div>
+    </div>
     <!-- div.container -->
     <div class="container">
       <div class="hangman-box">
@@ -15,7 +23,7 @@
       </div>
       <div class="game-box">
         <ul class="word-display">
-          <li class="letter"></li>
+          <li class="letter guessed"></li>
           <li class="letter"></li>
           <li class="letter"></li>
           <li class="letter"></li>
