@@ -6,6 +6,7 @@
 
 body {
   min-height: 100vh;
+  padding: 0, 10px;
   display: flex;
   background: blueviolet;
   align-items: center;
@@ -71,7 +72,7 @@ body {
   margin-top: 40px;
 }
 
-:where(.game-modal, .keyboard) button .keyboard button {
+:where(.game-modal, .keyboard) button {
   color: #fff;
   background: black;
   cursor: pointer;
@@ -87,7 +88,7 @@ body {
   width: calc(100% / 9 - 5px);
   padding: 7px;
 }
-.keyboard button:hover {
+:where(.game-modal, .keyboard) button:hover {
   background: lightblue;
 }
 
@@ -97,7 +98,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.6);
@@ -128,10 +129,24 @@ body {
 }
 
 .game-modal p b {
-  color: ;
+  color: #5e63ba;
   font-weight: 600;
 }
 
 .game-modal button {
   padding: 12px 23px;
+}
+
+@media (max-width: 782px) {
+  .container {
+    flex-direction: column;
+    padding: 30px 15px;
+    align-items: center;
+  }
+  .hangman-box img {
+    max-width: 200px;
+  }
+  .hangman-box h1 {
+    display: none;
+  }
 }
