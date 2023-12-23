@@ -11,16 +11,16 @@ const maxGuesses = 6;
 const resetGame = () => {
   correctLetters = [];
   wrongGuessCount = 0;
+  wordDisplay.innerHTML = currentWord
+    .split("")
+    .map(() => `<li class="letter"></li>`)
+    .join("");
   hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`;
   guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
   keyboardDiv
     .querySelectorAll("button")
     .forEach((btn) => (btn.disabled = false));
   gameModal.classList.remove("show");
-  wordDisplay.innerHTML = word
-    .split("")
-    .map(() => `<li class="letter"></li>`)
-    .join("");
 };
 
 const getRandomWord = () => {
